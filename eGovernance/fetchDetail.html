@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fee Receipt</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
+        .container {  width: 60%; margin: auto; background: #fff; padding: 20px; box-shadow: 0 20px 35px rgba(0,0,1,0.9); }
+        .header { text-align: center; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"] { width: 100%; padding: 10px; box-sizing: border-box; }
+        button { margin-top: 12px; padding: 10px 15px; background: #007bff; color: #fff; border: none; cursor: pointer; }
+        .details { margin-top: 20px; border: 1px solid #ccc; padding: 20px; background: #fafafa; } .details p { margin: 5px 0; }
+        .right-align { text-align: right; }
+        .print-button { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Fee Receipt</h1>
+            <p>Thakur College of Science And Commerce</p>
+            <p>Kandivali (E)</p>
+        </div>
+        <div class="form-group">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId">
+            <button onclick="fetchDetails()">Display Fees Recipt</button>
+        </div>
+        <div class="details" id="details" style="display: none;">
+            <h2>Fees Receipt</h2>
+            <p>Name: <span id="studentName"></span></p>
+            <p class="right-align">Phone Number: <span id="phoneNumber"></span></p>
+            <p>Remaining Fees: <span id="fees"></span></p>
+            <p>Paid Fees: <span id="paidFees"></span></p>
+            <p>Total Amount: <span id="totalAmount"></span></p>
+            <button class="print-button" onclick="window.print()">Print Receipt</button>
+        </div>
+    </div>
+    <script>
+        function fetchDetails() {
+            let studentId = document.getElementById('studentId').value;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'fetchStudent.php?student_id=' + studentId, true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    let response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        document.getElementById('studentName').innerText = response.first_name + ' ' + response.middle_name + ' ' + response.last_name;
+                        document.getElementById('phoneNumber').innerText = response.phone_number;
+                        document.getElementById('fees').innerText = response.fees;
+                        document.getElementById('paidFees').innerText = response.paid_fees;
+                        document.getElementById('totalAmount').innerText = response.total_amount;
+                        document.getElementById('details').style.display = 'block';
+                    } else {
+                        alert(response.message);
+                    }
+                } else {
+                    alert('An error occurred while fetching the details.');
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

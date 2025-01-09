@@ -1,0 +1,16 @@
+<---------Language--------->
+Language used: HTML, CSS, JavaScript, php
+
+
+<---------Database--------->
+Database used: MySQL through phpMyAdmin
+Database Name: egovern
+
+
+<---------Admin Panel--------->
+Email-Id: thakur123@gmail.com
+Password: Thakur123
+
+<---------Student Panel--------->
+Email-Id: student123@gmail.com
+Password: Student123

@@ -1,0 +1,154 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    padding: 15px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+
+.hero {
+    background: url('/images/images.jpg') no-repeat center center/cover;
+    height: 100vh; /* Full viewport height */
+    width: 100%;   /* Full width of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-align: center;
+}
+
+
+.hero .cta {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background: url('images/about_us.jpeg') no-repeat center center/cover;
+}
+
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section-course{
+    padding: 60px 20px;
+    text-align: center;
+}
+.section-ue{
+    padding: 60px 20px;
+    text-align: center;
+}
+.section-contact{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.course-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Contact Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #ff6600;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+

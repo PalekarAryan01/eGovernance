@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fees Management</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 50%; margin: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fees Management</h1>
+        <form id="feesForm">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required><br><br>
+            <label for="fees">Fees:</label>
+            <input type="text" id="fees" name="fees" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="receipt" style="display:none;">
+            <h2>Fee Receipt</h2>
+            <p>Student ID: <span id="r_studentId"></span></p>
+            <p>Fees: <span id="r_fees"></span></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

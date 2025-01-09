@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TCET Mumbai</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">TCET Mumbai</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to TCET Mumbai</h1>
+            <p>Empowering Future Leaders in Technology</p>
+            <a href="#courses" class="cta">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We are a premier educational institution in Mumbai focused on providing top-notch technical education and fostering innovation.</p>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section-course">
+        <h2>Our Courses</h2>
+        <div class="courses-container">
+            <div class="course-card">
+                <h3>Bachelor of Technology</h3>
+                <p>A comprehensive undergraduate program in engineering and technology.</p>
+            </div>
+            <div class="course-card">
+                <h3>Master of Technology</h3>
+                <p>Advanced studies in specialized fields of technology and innovation.</p>
+            </div>
+            <div class="course-card">
+                <h3>Diploma Courses</h3>
+                <p>Short-term courses designed to give you practical skills in various tech fields.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section-ue">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Annual Tech Fest - Feb 2025</li>
+            <li>Guest Lecture: AI and Future - March 2025</li>
+            <li>Workshop on Robotics - April 2025</li>
+        </ul>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section-contact">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 TCET Mumbai. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
